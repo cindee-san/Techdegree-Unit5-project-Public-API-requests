@@ -56,6 +56,8 @@ function getEmployeeCard(data) {
 
 function modalWindow(employee) {
   let date = new Date(employee.dob.date);
+  console.log(`${employee.dob.date}`);
+  console.log(date);
   let modalHTML = "";
 
   modalHTML = `<div class="modal-container">
@@ -74,9 +76,9 @@ function modalWindow(employee) {
             <p class="modal-text">${employee.location.street.number} 
             ${employee.location.street.name} 
             ${employee.location.city}, 
-            ${employee.location.state} 
+            ${employee.location.state}, 
             ${employee.location.postcode}</p>
-            <p class="modal-text">Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()} </p>
+            <p class="modal-text">Birthday: ${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()} </p>
         </div>
     </div>`;
 
